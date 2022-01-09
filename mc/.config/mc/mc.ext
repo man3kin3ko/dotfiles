@@ -2,3 +2,7 @@ regex/\.(mkv|flv|mp4|mov|wmv|avi|webm)$
 	Include=video
 include/video
 	Open=(mpv %f >/dev/null 2>&1 &)
+regex/\.(pdf|djvu|cbr|cbz)$
+	Include=documents
+include/documents
+	Open=(zathura %f)
