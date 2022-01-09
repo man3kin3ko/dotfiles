@@ -134,5 +134,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-PATH=$PATH:/home/lucia/010editor;export PATH; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 87FF8EFC-483D-BCAA-D67D-735CF60410D1 0FCE20A8-3302-5EAF-9314-F0A7174567CB
