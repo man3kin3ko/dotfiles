@@ -1,0 +1,38 @@
+xlogin*login.translations: #override\
+CtrlR: abort-display()\n\
+Delete: delete-character()\n\
+F1: set-session-argument(failsafe) finish-field()\n\
+CtrlReturn: set-session-argument(failsafe) finish-field()\n\
+Return: set-session-argument() finish-field()
+Left: move-backward-character()\n\
+Right: move-forward-character()\n\
+Home: move-to-begining()\n\
+End: move-to-end()\n\
+KP_Enter: set-session-argument() finish-field()
+
+xlogin*greeting: welcome to kraken
+
+xlogin*greetFace:   courier:bold:size=16
+xlogin*face:       courier:size-12
+xlogin*promptFace:    courier:size-12
+xlogin*failFace:    courier:size-12
+
+xlogin*borderWidth: 0
+xlogin*borderColor: #000000:
+
+xlogin*login.x: 481
+xlogin*login.y: 300
+
+xlogin*background: #000000
+xlogin*foreground: #ffffff
+
+xlogin*borderWidth:0
+xlogin*frameWidth: 0
+xlogin*innerFramesWidth:0
+xlogin*shdColor: #000000
+xlogin*hiColor: #000000
+
+xlogin.Login.foreground: #ffffff
+xlogin.Login.promptColor: #ffffff
+xlogin*greetColor: #ffffff
+xlogin*failColor: #ff5722
