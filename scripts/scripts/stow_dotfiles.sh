@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IGNORE='chrootit/'
+IGNORE='other_locations'
 
 cd ~/.dotfiles
 for d in */ ; do

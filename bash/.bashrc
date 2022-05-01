@@ -133,3 +133,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+. "$HOME/.cargo/env"
+
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ "$TERM" == "alacritty" ]]; then
+   if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+    eval "$(dircolors ~/.dir_colors)"
+   fi
+fi

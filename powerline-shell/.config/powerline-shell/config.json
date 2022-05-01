@@ -1,0 +1,11 @@
+{
+  "segments": [
+    "virtual_env",
+    "username",
+    "hostname",
+    "ssh",
+    "cwd",
+    "root"
+  ],
+  "theme": "solarized_dark"
+}

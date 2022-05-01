@@ -1,0 +1,19 @@
+[Default Applications]
+x-scheme-handler/tg=userapp-Telegram Desktop-1DE2I1.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/msteams=teams.desktop
+
+text/html=google-chrome.desktop
+
+inode/directory=nemo.desktop
+
+#audio/wav=museeks.desktop
+#audio/ogg=museeks.desktop
+#audio/mp3=museeks.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-90BQD1.desktop;userapp-Telegram Desktop-2HDNJ1.desktop;userapp-Telegram Desktop-MS9BJ1.desktop;userapp-Telegram Desktop-S0H9I1.desktop;userapp-Telegram Desktop-1DE2I1.desktop;
+
