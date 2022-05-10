@@ -87,7 +87,7 @@ skin=nicedark
 
 [Layout]
 output_lines=0
-left_panel_size=52
+left_panel_size=37
 top_panel_size=0
 message_visible=false
 keybar_visible=true
