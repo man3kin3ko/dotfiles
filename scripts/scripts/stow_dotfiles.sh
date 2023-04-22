@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IGNORE='other_locations'
+IGNORE='screenshots'
 
 cd ~/.dotfiles
 for d in */ ; do

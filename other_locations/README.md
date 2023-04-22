@@ -1,1 +1,0 @@
-This directory contains system-wide config files 

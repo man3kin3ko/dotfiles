@@ -1,140 +1,117 @@
-bindsym Print exec flameshot gui
+font pango:JetBrains Mono 10
 
-exec --no-startup-id "setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle"
-exec kbdd
+# class                 border  bground text    indicator child_border
+client.focused_inactive #7A82DA #7A82DA #FFFFFF #9F7EFE   #7A82DA
+client.focused          #039be5 #039be5 #FFFFFF #00adff   #3691FF
+client.unfocused        #636D83 #636D83 #FFFFFF #abb2bf   #636D83
+client.urgent           #FF6480 #FF6480 #FFFFFF #900000   #636D83
+client.placeholder      #CE9887 #CE9887 #FFFFFF #F9C859   #636D83
+
+gaps inner 20
+default_border pixel 4
+
 set $mod Mod4
+set $submod Mod1
 
-#add polybar (later)
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+floating_modifier $submod
+tiling_drag modifier titlebar
+bindsym $mod+space focus mode_toggle
 
-focus_follows_mouse no
-
-exec feh --bg-scale $HOME/pictures/ahmet-akar.jpg
-exec_always xautolock -time 20 -locker "betterlockscreen -l"
+exec_always --no-startup-id "xrdb -load $HOME/.Xresources"
+exec_always --no-startup-id "xsetroot -cursor_name left_ptr"
+exec_always --no-startup-id "dunst -config $HOME/.config/dunst/dunstrc"
 exec_always --no-startup-id "picom"
+exec_always --no-startup-id "plank"
+exec --no-startup-id "$HOME/.config/polybar/launch.sh"
 
-bindsym $mod+l exec betterlockscreen -l
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id "feh --bg-scale $feh --bg-fill $HOME/pictures/ue-parking02.jpg"
+exec --no-startup-id "setxkbmap -layout us,ru -option 'grp:alt_shift_toggle,grp_led:scroll'"
+exec --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
-assign [class="^TelegramDesktop$"] → 2
-for_window [class="^TelegtamDesktop$"] floating enable
-exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/lucia/.config/i3/float.json'"
-exec telegram
-exec i3-msg workspace 1
+bindsym $mod+Return exec --no-startup-id "alacritty"
+bindsym Print exec flameshot gui
+bindsym $mod+n exec nemo
+bindsym $mod+d exec --no-startup-id "rofi -show drun"
 
-font pango:JetBrains Mono 8
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# (!) hey yo are you even use it???
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-# start a terminal
-bindsym $mod+Return exec $HOME/scripts/alacritty.sh
-
-# kill focused window
+bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q kill
+bindsym $mod+h split h
+bindsym $mod+v split v
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+Shift+f fullscreen toggle
+bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+e layout toggle split
 
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
-# change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+h split h
-bindsym $mod+v split v
-bindsym $mod+f fullscreen toggle
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-bindsym $mod+Shift+space floating toggle
+bindsym XF86Switch_VT_12 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86Switch_VT_11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86Switch_VT_10 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86Switch_VT_10 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
 
-# focus the parent container
-#bindsym $mod+a focus parent
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
-# focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
+for_window [window_role="pop-up|bubble|task_dialog|Preferences|setup"] floating enable
+for_window [window_role="demo"] resize set 800 600, move position center
+for_window [class="(?i)nemo"] move window to scratchpad, scratchpad show, floating enable, resize set 800 400, move position center
+for_window [class="(?i)simplescreenrecorder"] floating enable, move position 5 30
+for_window [class="(?i)nitrogen|engrampa|flameshot|file-roller|fsearch|qt5ct"] floating enable, resize set 600 500, move position center
+for_window [class="(?i)atril|pavucontrol|lxappearance|viewnior|keepassxc|veracrypt"] floating enable
+for_window [class="(?i)mpv"] floating enable, resize set 350 250, sticky enable, move window to position 1000 85
 
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-
-bindsym $mod+Shift+r restart
-
-bindsym $mod+Shift+e exec i3-msg exit
-
-mode "resize" {
-        bindsym Left resize grow width 10 px or 10 ppt
-        bindsym Down resize shrink height 10 px or 10 ppt
-        bindsym Up resize grow height 10 px or 10 ppt
-        bindsym Right resize shrink width 10 px or 10 ppt
-
-        bindsym $mod+r mode "default"
-}
+for_window [window_role="GtkFileChooserDialog"] resize set 800 600, move position center
+for_window [class="(?i)firefox|xfce4-terminal|nemo"] focus
+for_window [class="(?i)firefox|telegram|tor|discord"] border pixel 1
 
 bindsym $mod+r mode "resize"
+mode "resize" {
+        bindsym j resize shrink width 3 px or 3 ppt
+        bindsym k resize grow height 3 px or 3 ppt
+        bindsym l resize shrink height 3 px or 3 ppt
+        bindsym semicolon resize grow width 3 px or 3 ppt
 
-bar {
- colors {
-    background #2F343A
-    focused_workspace #9f7efe #9f7efe #FFFFFF
-    urgent_workspace  #FF6480 #FF6480 #FFFFFF
-    binding_mode      #a8c000 #a8c000 #FFFFFF
-    active_workspace  #78A8C0 #78a8c0 #FFFFFF
-}   
-	tray_output none
-	status_command i3blocks
+        bindsym Left resize shrink width 3 px or 3 ppt
+        bindsym Down resize grow height 3 px or 3 ppt
+        bindsym Up resize shrink height 3 px or 3 ppt
+        bindsym Right resize grow width 3 px or 3 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
 }
-
-client.focused #7a82da #7a82da #FFFFFF #2E9EF4 #333333
-client.urgent  #FF6480 #FF6480 #FFFFFF #900000 #FF6480
