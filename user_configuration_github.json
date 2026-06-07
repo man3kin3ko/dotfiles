@@ -1,0 +1,341 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pipewire"
+        },
+        "bluetooth_config": {
+            "enabled": true
+        },
+        "firewall_config": {
+            "firewall": "firewalld"
+        },
+        "fonts_config": {
+            "fonts": [
+                "ttf-dejavu",
+                "noto-fonts-cjk",
+                "noto-fonts-emoji",
+                "noto-fonts"
+            ]
+        },
+        "power_management_config": {
+            "power_management": "power-profiles-daemon"
+        },
+        "print_service_config": {
+            "enabled": true
+        }
+    },
+    "archinstall-language": "English",
+    "auth_config": {},
+    "bootloader_config": {
+        "bootloader": "Limine",
+        "removable": true,
+        "uki": true
+    },
+    "custom_commands": [],
+    "disk_config": {
+        "btrfs_options": {
+            "snapshot_config": null
+        },
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "86410c2e-ca52-4d24-936d-6610cb80cd11",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "mount_options": [],
+                        "mountpoint": "/",
+                        "obj_id": "3288b6e9-fa25-46e2-9d53-eb0b97de486e",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 499031998464
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "hostname": "framework",
+    "kernels": [
+        "linux-hardened"
+    ],
+    "locale_config": {
+        "kb_layout": "ru",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [],
+        "mirror_regions": {
+            "Armenia": [
+                "http://mirrors.teamcloud.am/archlinux/$repo/os/$arch",
+                "https://mirrors.teamcloud.am/archlinux/$repo/os/$arch"
+            ],
+            "China": [
+                "http://mirrors.163.com/archlinux/$repo/os/$arch",
+                "http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.hust.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.hust.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.zju.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.nju.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.hit.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.hit.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.aliyun.com/archlinux/$repo/os/$arch",
+                "https://mirrors.aliyun.com/archlinux/$repo/os/$arch",
+                "http://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirror.nyist.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirror.nyist.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.qlu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.jcut.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.jcut.edu.cn/archlinux/$repo/os/$arch"
+            ],
+            "Kazakhstan": [
+                "http://mirror.ps.kz/archlinux/$repo/os/$arch",
+                "https://mirror.ps.kz/archlinux/$repo/os/$arch",
+                "http://mirror.linxhost.ru/$repo/os/$arch"
+            ],
+            "Russia": [
+                "http://mirror.yandex.ru/archlinux/$repo/os/$arch",
+                "https://mirror.yandex.ru/archlinux/$repo/os/$arch",
+                "http://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "https://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "http://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
+                "https://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
+                "http://mirrors.powernet.com.ru/archlinux/$repo/os/$arch",
+                "http://repository.su/archlinux/$repo/os/$arch",
+                "https://repository.su/archlinux/$repo/os/$arch",
+                "http://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
+                "https://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
+                "http://mirror.kamtv.ru/archlinux/$repo/os/$arch",
+                "https://mirror.kamtv.ru/archlinux/$repo/os/$arch",
+                "http://mirror.kpfu.ru/archlinux/$repo/os/$arch",
+                "https://mirror.kpfu.ru/archlinux/$repo/os/$arch",
+                "http://archlinux.gay/archlinux/$repo/os/$arch",
+                "https://archlinux.gay/archlinux/$repo/os/$arch",
+                "http://vlst.su/archlinux/$repo/os/$arch",
+                "https://vlst.su/archlinux/$repo/os/$arch",
+                "http://mirror.cachy-arch.ru/archlinux/$repo/os/$arch",
+                "https://mirror.cachy-arch.ru/archlinux/$repo/os/$arch",
+                "http://wan.metrosg.ru/archlinux/$repo/os/$arch",
+                "https://wan.metrosg.ru/archlinux/$repo/os/$arch"
+            ],
+            "Serbia": [
+                "http://mirror.pmf.kg.ac.rs/archlinux/$repo/os/$arch",
+                "http://mirror1.sox.rs/archlinux/$repo/os/$arch",
+                "https://mirror1.sox.rs/archlinux/$repo/os/$arch"
+            ],
+            "South Korea": [
+                "http://ftp.kaist.ac.kr/ArchLinux/$repo/os/$arch",
+                "http://kr.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "https://kr.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "http://ftp.lanet.kr/pub/archlinux/$repo/os/$arch",
+                "https://ftp.lanet.kr/pub/archlinux/$repo/os/$arch",
+                "http://mirror.siwoo.org/archlinux/$repo/os/$arch",
+                "https://mirror.siwoo.org/archlinux/$repo/os/$arch",
+                "http://mirror.funami.tech/arch/$repo/os/$arch",
+                "https://mirror.funami.tech/arch/$repo/os/$arch",
+                "http://mirror.keiminem.com/archlinux/$repo/os/$arch",
+                "http://mirror2.keiminem.com/archlinux/$repo/os/$arch",
+                "https://mirror.keiminem.com/archlinux/$repo/os/$arch",
+                "https://mirror2.keiminem.com/archlinux/$repo/os/$arch",
+                "https://mirror.krfoss.org/archlinux/$repo/os/$arch",
+                "http://mirror.distly.kr/archlinux/$repo/os/$arch",
+                "https://mirror.distly.kr/archlinux/$repo/os/$arch",
+                "https://mirror.hemino.net/archlinux/$repo/os/$arch",
+                "http://mirror.wane.kr/archlinux/$repo/os/$arch",
+                "https://mirror.wane.kr/archlinux/$repo/os/$arch",
+                "http://ftp.io.kr/$repo/os/$arch",
+                "https://ftp.io.kr/$repo/os/$arch",
+                "http://mirror.pileus.kr/archlinux/$repo/os/$arch",
+                "https://mirror.pileus.kr/archlinux/$repo/os/$arch"
+            ],
+            "T\u00fcrkiye": [
+                "http://ftp.linux.org.tr/archlinux/$repo/os/$arch",
+                "http://mirror.timtal.com.tr/archlinux/$repo/os/$arch",
+                "https://mirror.timtal.com.tr/archlinux/$repo/os/$arch",
+                "https://tr.arch.niranjan.co/$repo/os/$arch"
+            ],
+            "Uzbekistan": [
+                "http://mirror.dc.uz/arch/$repo/os/$arch",
+                "https://mirror.dc.uz/arch/$repo/os/$arch"
+            ],
+            "Worldwide": [
+                "http://mirror.rackspace.com/archlinux/$repo/os/$arch",
+                "https://mirror.rackspace.com/archlinux/$repo/os/$arch",
+                "https://ftpmirror.infania.net/mirror/archlinux/$repo/os/$arch",
+                "https://geo.mirror.pkgbuild.com/$repo/os/$arch",
+                "https://fastly.mirror.pkgbuild.com/$repo/os/$arch"
+            ]
+        },
+        "optional_repositories": [
+            "multilib"
+        ]
+    },
+    "network_config": {
+        "type": "iso"
+    },
+    "ntp": true,
+    "packages": [
+	"obconf",
+	"openbox",
+	"picom",
+	"polybar",
+	"flameshot",
+	"plank",
+	"screen",
+	"tar",
+	"telegram-desktop",
+	"veracrypt",
+	"vlc-gui-qt",
+	"yay",
+        "zerotier-one",
+        "zathura",
+        "zathura-cb",
+        "zathura-djvu",
+        "zathura-pdf-mupdf",
+        "yggdrasil",
+        "wireshark-qt",
+        "whois",
+        "vlc",
+        "ttf-roboto-mono-nerd",
+        "ttf-roboto-mono",
+        "ttf-roboto",
+        "ttf-jetbrains-mono",
+        "ttf-jetbrains-mono-nerd",
+        "tor",
+        "torbrowser-launcher",
+        "spotify-launcher",
+        "routersploit",
+        "rofi",
+        "rofi-emoji",
+        "remmina",
+        "qbittorrent",
+        "python",
+        "openvpn",
+        "openssh",
+        "obsidian",
+        "obsidian-icon-theme",
+        "obs-studio",
+        "noto-fonts",
+        "npm",
+        "networkmanager",
+        "networkmanager-dmenu",
+        "networkmanager-openvpn",
+        "networkmanager-openconnect",
+        "networkmanager-qt",
+        "nano",
+        "nano-syntax-highlighting",
+        "metasploit",
+        "make",
+        "man-db",
+        "man-pages",
+        "mc",
+        "linux-tools-meta",
+        "linux-hardened-headers",
+        "libreoffice-fresh",
+        "libreoffice-fresh-ru",
+        "keepassxc",
+        "jre8-openjdk",
+        "jre25-openjdk",
+        "jadx",
+        "gzip",
+        "gparted",
+        "git",
+        "git-credential-oauth",
+        "firefox",
+        "firefox-adblock-plus",
+        "docker",
+        "cairo-dock",
+        "cairo-dock-plug-ins",
+        "ca-certificates",
+        "ca-certificates-mozilla",
+        "bash"
+    ],
+    "pacman_config": {
+        "color": true,
+        "parallel_downloads": 5
+    },
+    "profile_config": {
+        "gfx_driver": "All open-source",
+        "greeter": "lightdm-gtk-greeter",
+        "profile": {
+            "custom_settings": {
+                "i3-wm": {}
+            },
+            "details": [
+                "i3-wm"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": {
+        "algorithm": "lz4",
+        "enabled": true
+    },
+    "timezone": "Europe/Moscow",
+    "version": "4.3"
+}
