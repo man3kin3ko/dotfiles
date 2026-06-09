@@ -12,7 +12,6 @@
         "fonts_config": {
             "fonts": [
                 "ttf-dejavu",
-                "noto-fonts-cjk",
                 "noto-fonts-emoji",
                 "noto-fonts"
             ]
