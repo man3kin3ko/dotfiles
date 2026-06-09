@@ -45,54 +45,15 @@
         "custom_repositories": [],
         "custom_servers": [],
         "mirror_regions": {
-            "Armenia": [
-                "http://mirrors.teamcloud.am/archlinux/$repo/os/$arch",
-                "https://mirrors.teamcloud.am/archlinux/$repo/os/$arch"
-            ],
             "China": [
-                "http://mirrors.163.com/archlinux/$repo/os/$arch",
-                "http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.hust.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.hust.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.zju.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.nju.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.hit.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.hit.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.aliyun.com/archlinux/$repo/os/$arch",
-                "https://mirrors.aliyun.com/archlinux/$repo/os/$arch",
                 "http://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirror.nyist.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirror.nyist.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.qlu.edu.cn/archlinux/$repo/os/$arch",
-                "http://mirrors.jcut.edu.cn/archlinux/$repo/os/$arch",
-                "https://mirrors.jcut.edu.cn/archlinux/$repo/os/$arch"
-            ],
-            "Kazakhstan": [
-                "http://mirror.ps.kz/archlinux/$repo/os/$arch",
-                "https://mirror.ps.kz/archlinux/$repo/os/$arch",
-                "http://mirror.linxhost.ru/$repo/os/$arch"
+                "https://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch"
             ],
             "Russia": [
                 "http://mirror.yandex.ru/archlinux/$repo/os/$arch",
                 "https://mirror.yandex.ru/archlinux/$repo/os/$arch",
                 "http://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
                 "https://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
-                "http://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
-                "https://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
-                "http://mirrors.powernet.com.ru/archlinux/$repo/os/$arch",
                 "http://repository.su/archlinux/$repo/os/$arch",
                 "https://repository.su/archlinux/$repo/os/$arch",
                 "http://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
@@ -103,52 +64,18 @@
                 "https://mirror.kpfu.ru/archlinux/$repo/os/$arch",
                 "http://archlinux.gay/archlinux/$repo/os/$arch",
                 "https://archlinux.gay/archlinux/$repo/os/$arch",
-                "http://vlst.su/archlinux/$repo/os/$arch",
-                "https://vlst.su/archlinux/$repo/os/$arch",
                 "http://mirror.cachy-arch.ru/archlinux/$repo/os/$arch",
                 "https://mirror.cachy-arch.ru/archlinux/$repo/os/$arch",
                 "http://wan.metrosg.ru/archlinux/$repo/os/$arch",
                 "https://wan.metrosg.ru/archlinux/$repo/os/$arch"
             ],
             "Serbia": [
-                "http://mirror.pmf.kg.ac.rs/archlinux/$repo/os/$arch",
-                "http://mirror1.sox.rs/archlinux/$repo/os/$arch",
-                "https://mirror1.sox.rs/archlinux/$repo/os/$arch"
-            ],
-            "South Korea": [
-                "http://ftp.kaist.ac.kr/ArchLinux/$repo/os/$arch",
-                "http://kr.mirrors.cicku.me/archlinux/$repo/os/$arch",
-                "https://kr.mirrors.cicku.me/archlinux/$repo/os/$arch",
-                "http://ftp.lanet.kr/pub/archlinux/$repo/os/$arch",
-                "https://ftp.lanet.kr/pub/archlinux/$repo/os/$arch",
-                "http://mirror.siwoo.org/archlinux/$repo/os/$arch",
-                "https://mirror.siwoo.org/archlinux/$repo/os/$arch",
-                "http://mirror.funami.tech/arch/$repo/os/$arch",
-                "https://mirror.funami.tech/arch/$repo/os/$arch",
-                "http://mirror.keiminem.com/archlinux/$repo/os/$arch",
-                "http://mirror2.keiminem.com/archlinux/$repo/os/$arch",
-                "https://mirror.keiminem.com/archlinux/$repo/os/$arch",
-                "https://mirror2.keiminem.com/archlinux/$repo/os/$arch",
-                "https://mirror.krfoss.org/archlinux/$repo/os/$arch",
-                "http://mirror.distly.kr/archlinux/$repo/os/$arch",
-                "https://mirror.distly.kr/archlinux/$repo/os/$arch",
-                "https://mirror.hemino.net/archlinux/$repo/os/$arch",
-                "http://mirror.wane.kr/archlinux/$repo/os/$arch",
-                "https://mirror.wane.kr/archlinux/$repo/os/$arch",
-                "http://ftp.io.kr/$repo/os/$arch",
-                "https://ftp.io.kr/$repo/os/$arch",
-                "http://mirror.pileus.kr/archlinux/$repo/os/$arch",
-                "https://mirror.pileus.kr/archlinux/$repo/os/$arch"
+                "http://mirror.pmf.kg.ac.rs/archlinux/$repo/os/$arch"
             ],
             "T\u00fcrkiye": [
-                "http://ftp.linux.org.tr/archlinux/$repo/os/$arch",
                 "http://mirror.timtal.com.tr/archlinux/$repo/os/$arch",
                 "https://mirror.timtal.com.tr/archlinux/$repo/os/$arch",
                 "https://tr.arch.niranjan.co/$repo/os/$arch"
-            ],
-            "Uzbekistan": [
-                "http://mirror.dc.uz/arch/$repo/os/$arch",
-                "https://mirror.dc.uz/arch/$repo/os/$arch"
             ],
             "Worldwide": [
                 "http://mirror.rackspace.com/archlinux/$repo/os/$arch",
