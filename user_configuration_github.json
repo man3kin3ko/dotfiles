@@ -32,77 +32,6 @@
         "uki": true
     },
     "custom_commands": [],
-    "disk_config": {
-        "btrfs_options": {
-            "snapshot_config": null
-        },
-        "config_type": "default_layout",
-        "device_modifications": [
-            {
-                "device": "/dev/nvme0n1",
-                "partitions": [
-                    {
-                        "btrfs": [],
-                        "dev_path": null,
-                        "flags": [
-                            "boot",
-                            "esp"
-                        ],
-                        "fs_type": "fat32",
-                        "mount_options": [],
-                        "mountpoint": "/boot",
-                        "obj_id": "86410c2e-ca52-4d24-936d-6610cb80cd11",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "GiB",
-                            "value": 1
-                        },
-                        "start": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "MiB",
-                            "value": 1
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    },
-                    {
-                        "btrfs": [],
-                        "dev_path": null,
-                        "flags": [],
-                        "fs_type": "ext4",
-                        "mount_options": [],
-                        "mountpoint": "/",
-                        "obj_id": "3288b6e9-fa25-46e2-9d53-eb0b97de486e",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 499031998464
-                        },
-                        "start": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 1074790400
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    }
-                ],
-                "wipe": true
-            }
-        ]
-    },
     "hostname": "framework",
     "kernels": [
         "linux-hardened"
@@ -238,17 +167,29 @@
     },
     "ntp": true,
     "packages": [
-		"openbox",
-		"picom",
-		"polybar",
-		"flameshot",
-		"plank",
-		"screen",
-		"tar",
-		"telegram-desktop",
-		"veracrypt",
-		"vlc-gui-qt",
-		"yay",
+        "openbox",
+		"obconf-qt",
+		"automake",
+		"autoconf",
+		"debugedit",
+		"fakeroot",
+		"gcc",
+		"nemo",
+		"dunst",
+		"stow",
+        "picom",
+        "polybar",
+        "flameshot",
+        "plank",
+		"alacritty",
+        "screen",
+        "tar",
+        "telegram-desktop",
+		"chromium",
+		"drawio-desktop",
+        "veracrypt",
+        "vlc-gui-qt",
+        "yay",
         "zerotier-one",
         "zathura",
         "zathura-cb",
