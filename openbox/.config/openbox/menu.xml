@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE menu [
+  <!ENTITY icons "/usr/share/openbox/icons/you">
+]>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="apps-term-menu" label="Terminals">
+  <item label="Alacritty">
+    <action name="Execute">
+      <command>alacritty</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Xterm">
+    <action name="Execute"><command>xterm</command></action>
+  </item>
+</menu>
+
+<menu id="keyboard-menu" label="Keyboard">
+  <item label="Characters">
+  <action name="Execute">
+    <command>gnome-characters</command>
+  </action>
+  </item>
+</menu>
+
+<menu id="apps-office-menu" label="Office">
+  <item label="LibreOffice">
+    <action name="Execute">
+      <command>libreoffice</command>
+    </action>
+  </item>
+  <item label="LibreOffice Writer">
+    <action name="Execute">
+      <command>libreoffice --writer</command>
+    </action>
+  </item>
+  <item label="LibreOffice Calc">
+    <action name="Execute">
+      <command>libreoffice --calc</command>
+    </action>
+  </item>
+  <item label="Drawio">
+  <action name="Execute">
+    <command>drawio</command>
+  </action>
+  </item>
+  <item label="Obsidian">
+  <action name="Execute">
+    <command>obsidian</command>
+  </action>
+  </item>
+</menu>
+
+<menu id="apps-multimedia-menu" label="Multimedia">
+  <item label="Nemo Filemanager">
+    <action name="Execute">
+      <command>nemo</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+    <item label="Spotify">
+    <action name="Execute">
+      <command>spotify-launcher</command>
+    </action>
+  </item>
+  <item label="Qbittorrent">
+    <action name="Execute">
+      <command>qbittorrent</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="VLC">
+    <action name="Execute">
+      <command>vlc</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Veracrypt">
+  <action name="Execute">
+    <command>veracrypt</command>
+    <startupnotify>
+      <enabled>yes</enabled>
+    </startupnotify>
+  </action>
+  </item>
+  <item label="OBS Studio">
+  <action name="Execute">
+    <command>obs</command>
+  </action>
+  </item>
+</menu>
+
+<menu id="network-menu" label="Network">
+  <item label="Wireshark">
+  <action name="Execute">
+    <command>sudo -A wireshark</command>
+  </action>
+  </item>
+  <item label="Remmina">
+  <action name="Execute">
+    <command>remmina</command>
+  </action>
+  </item>
+</menu>
+
+<menu id="admin-menu" label="Administration">
+  <item label="Gpated">
+  <action name="Execute">
+    <!-- <command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY gparted</command> -->
+  </action>
+  </item>
+</menu>
+
+<menu id="pentest-menu" label="Pentest">
+  <item label="JADX">
+  <action name="Execute">
+    <command>jadx-gui</command>
+  </action>
+  </item>
+  <item label="Burp Suite">
+  <action name="Execute">
+    <command></command>
+  </action>
+  </item>
+</menu>
+
+<menu id="system-menu" label="System">
+  <item label="Lock">
+    <action name="Execute">
+      <command></command>
+    </action>
+  </item> 
+  <item label="Logout">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+  <item label="Suspend">
+    <action name="Execute">
+      <command>systemctl suspend</command>
+    </action>
+  </item>
+  <item label="Reboot">
+    <action name="Execute">
+      <command>systemctl reboot</command>
+    </action>
+  </item>
+  <item label="Shutdown">
+    <action name="Execute">
+      <command>systemctl poweroff</command>
+    </action>
+  </item>
+  <separator />
+  <item label="Openbox Configuration Manager">
+  <action name="Execute">
+    <command>obconf-qt</command>
+    <startupnotify><enabled>yes</enabled></startupnotify>
+  </action>
+  </item>  
+  <item label="Reconfigure Openbox">
+    <action name="Reconfigure" />
+  </item>
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <menu icon="&icons;/editor.png" id="apps-office-menu"/>
+  <menu icon="&icons;/apps.png" id="apps-multimedia-menu"/>
+  <menu icon="&icons;/keyboard.png"  id="keyboard-menu"/>
+  <menu icon="&icons;/terminal.png"  id="apps-term-menu"/>
+  <menu icon="&icons;/browser.png" id="network-menu"/>
+  <menu icon="&icons;/stats.png" id="admin-menu"/>
+  <menu icon="&icons;/root.png" id="pentest-menu"/>
+  <separator/>
+  <menu id="system-menu"/>
+</menu>
+
+</openbox_menu>

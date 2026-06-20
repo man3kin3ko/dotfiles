@@ -1,0 +1,28 @@
+general.import = [ "~/.config/alacritty/github_dark.toml" ]
+
+[window.padding]
+x = 15
+y = 15
+
+[font]
+size = 6
+
+  [font.normal]
+  family = "monospace"
+  style = "Regular"
+
+  [font.bold]
+  family = "monospace"
+  style = "Bold"
+
+  [font.italic]
+  family = "monospace"
+  style = "Italic"
+
+  [font.offset]
+  x = 0
+  y = 0
+
+  [font.glyph_offset]
+  x = 0
+  y = 0

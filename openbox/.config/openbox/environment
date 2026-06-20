@@ -1,0 +1,3 @@
+export PATH
+XDG_CURRENT_DESKTOP='openbox'; export XDG_CURRENT_DESKTOP
+JAVA_HOME='/usr/lib/jvm/java-25-openjdk/'; export JAVA_HOME

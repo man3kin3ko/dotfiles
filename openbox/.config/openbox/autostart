@@ -1,0 +1,22 @@
+export SUDO_ASKPASS="$HOME/scripts/rofi_askpass" &
+
+# xorg
+
+xrdb -load $HOME/.Xresources &
+setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'
+
+# xfce-settings
+
+#xfsettingsd &
+xfce4-power-manager &
+if [[ ! `pidof xfce-polkit` ]]; then
+	/usr/lib/xfce-polkit/xfce-polkit &
+fi
+
+# rice stuff
+plank &
+exec picom &
+#exec rofi &
+exec dunst &
+exec $HOME/.config/polybar/launch.sh &
+# exec feh --bg-fill $HOME/pictures/
